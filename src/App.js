@@ -1,25 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
-
+import styled from 'styled-components'
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
+import Card from './components/Card';
+// import {css} from 'styled-components'
+import Works from './components/Works';
+import Footer from './components/Footer/Footer';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Container>
+      <Navbar />   
+      <Home />  
+      <About />
+      <Card />
+    </Container>
+    
+    <Works />
+    <Container>
+      <Footer />
+    </Container>
+    </>
   );
 }
-
 export default App;
+
+const Container = styled.div`
+width: 100%;
+background-color: purple;
+padding: 0 70px;
+box-sizing: border-box;
+`
+
+// const Container=styled.div`
+//   background-color:yellow;
+//   color:red;
+//   width: 100vw;
+//   height: 100vh;
+//   h1{
+//     margin: 0;
+//     padding: 0;
+//   }
+// `
+
